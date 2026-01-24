@@ -55,6 +55,7 @@ header nav a:hover {
 }
 
 /* Hero Section */
+/* Hero Section */
 .hero {
     position: relative;
     margin-bottom: 32px;
@@ -72,7 +73,6 @@ header nav a:hover {
     left: 0;
     width: 100%;
     background-color: rgba(13, 59, 102, 0.8);
-    /* Semi-transparent dark blue */
     padding: 16px;
     text-align: center;
 }
@@ -81,6 +81,24 @@ header nav a:hover {
     color: white;
     font-size: 2.2rem;
     margin: 0;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 12px;
+    border-radius: 8px;
+    max-width: 60%;
+    color: var(--primary-color);
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 12px;
+    border-radius: 6px;
 }
 
 /* Mission Section */
