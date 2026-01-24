@@ -28,24 +28,24 @@ footer {
     margin: 0 auto;
 }
 
-/* ===== Header ===== */
-header img {
-    display: block;
-    margin-bottom: 10px;
-}
-
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-header nav li {
-    margin: 5px 0;
-}
-
-header nav a {
-    text-decoration: none;
+/* ===== Typography / Headings ===== */
+h1,
+h2 {
+    font-family: var(--heading-font);
     color: var(--primary-color);
+    margin: 16px 0;
+}
+
+/* ===== Navigation ===== */
+header nav {
+    display: flex;
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    margin: 0 8px;
 }
 
 /* ===== Hero Section ===== */
@@ -60,69 +60,48 @@ header nav a {
     height: auto;
 }
 
-/* Hero Banner (Dark Blue Bar with White Text) */
-.hero-banner {
+.hero h1 {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 20px;
     width: 100%;
-    background-color: var(--primary-color);
-    padding: 16px;
     text-align: center;
-}
-
-.hero-banner h1 {
-    color: white;
+    background-color: var(--accent1-color);
+    color: #000;
+    padding: 16px;
     font-size: 2.2rem;
     margin: 0;
 }
 
-/* Mission Box (Dark Semi-Transparent Box Over Image) */
-.mission-box {
+.hero article {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    width: calc(100% - 40px);
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 12px;
     border-radius: 8px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
+    max-width: 60%;
+    color: var(--primary-color);
 }
 
-.mission-box p {
-    margin: 0;
-    flex: 1;
-    line-height: 1.5;
-}
-
-.mission-box .small-image {
-    width: 100px;
-    border-radius: 4px;
-    flex-shrink: 0;
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 12px;
+    border-radius: 6px;
 }
 
 /* ===== Sections ===== */
-.history-section,
-.adventure-section {
-    margin: 20px 0;
-    padding: 0;
+section {
+    margin: 16px;
+    padding: 8px;
 }
 
-.history-section h2,
-.adventure-section h2 {
+section h2 {
     background-color: var(--primary-color);
     color: white;
     padding: 10px;
     text-align: center;
-    margin: 0;
-}
-
-.history-section p {
-    margin: 16px 0;
-    line-height: 1.5;
+    margin: 0 0 10px 0;
 }
 
 /* ===== Footer ===== */
@@ -135,21 +114,4 @@ footer {
 
 footer p {
     margin: 0 0 10px 0;
-}
-
-.socialmedia {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 10px;
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
-.socialmedia img {
-    width: 32px;
-    height: 32px;
-    border-radius: 4px;
 }
