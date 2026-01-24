@@ -30,27 +30,28 @@ footer {
     margin: 0 auto;
 }
 
-/* Headings */
-h1,
-h2 {
-    font-family: var(--heading-font);
+/* Header */
+header img {
+    display: block;
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav li {
+    margin: 5px 0;
+}
+
+header nav a {
+    text-decoration: none;
     color: var(--primary-color);
-    margin: 16px 0;
 }
 
-/* General Spacing */
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-}
-
-/* Header Nav */
-header nav {
-    display: flex;
-    gap: 16px;
+header nav a:hover {
+    text-decoration: underline;
 }
 
 /* Hero Section */
@@ -65,33 +66,59 @@ header nav {
     height: auto;
 }
 
-h1 {
+.hero-text-overlay {
     position: absolute;
-    top: 20px;
+    top: 0;
+    left: 0;
     width: 100%;
+    background-color: rgba(13, 59, 102, 0.8);
+    /* Semi-transparent dark blue */
     padding: 16px;
     text-align: center;
-    opacity: 0.9;
-    background-color: var(--accent1-color);
-    color: #000;
+}
+
+.hero-text-overlay h1 {
+    color: white;
     font-size: 2.2rem;
+    margin: 0;
 }
 
-.hero article {
+/* Mission Section */
+.mission {
+    background-color: rgba(13, 59, 102, 0.8);
+    color: white;
+    padding: 20px;
+    position: relative;
+    margin: 20px 0;
+}
+
+.mission p {
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+}
+
+.mission .small-image {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 12px;
-    border-radius: 8px;
-    max-width: 60%;
+    bottom: 10px;
+    right: 10px;
+    width: 100px;
+    border-radius: 4px;
 }
 
-.hero article img {
-    float: right;
-    width: 125px;
-    margin-left: 12px;
-    border-radius: 6px;
+/* History & Adventure Sections */
+.history,
+.adventure {
+    margin: 20px 0;
+    padding: 16px;
+}
+
+.history h2,
+.adventure h2 {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin: 0 0 10px 0;
 }
 
 /* Footer */
@@ -102,12 +129,11 @@ footer {
     text-align: center;
 }
 
+.socialmedia {
+    margin-top: 10px;
+}
+
 .socialmedia a {
     text-decoration: none;
     margin: 0 8px;
-}
-
-/* Optional: Improve accessibility */
-img {
-    display: block;
 }
