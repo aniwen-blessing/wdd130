@@ -128,35 +128,34 @@ section {
     border-radius: 6px;
 }
 
-/* ===== Adventure / Image Grids (Optional Utilities) ===== */
-/* Keep only if used in HTML */
-
-.flex {
-    background-color: #aba;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.grid {
-    background-color: #abb;
-    display: grid;
-    place-items: center;
-}
-
-.container2 {
+.adventure {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    /* or space-around */
+    gap: 16px;
+    margin-top: 1rem;
 }
 
-.container3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.adventure figure {
+    flex: 1 1 1 calc(20% - 16px);
+    /* 5 equal columns with gap */
+    text-align: center;
+    min-width: 140px;
+    /* prevents shrinking too much on small screens */
 }
 
-.columns-3 {
-    grid-column: 1 / 4;
+.adventure img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.adventure figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
 /* ===== Footer ===== */
