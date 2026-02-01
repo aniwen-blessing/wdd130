@@ -6,22 +6,45 @@
     --heading-font: 'Arial Black', Arial, sans-serif;
 }
 
-/* ===== Reset & Base Setup ===== */
+/* ===== Reset ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ===== Base Styles ===== */
 body {
     font-family: var(--body-font);
     color: var(--primary-color);
     background-color: #f9f9f9;
-    line-height: 1.6;
 }
 
-/* ===== Layout Container ===== */
-/* All major sections share a consistent max-width layout */
+header {
+    display: grid;
+    grid-template-columns: 200px auto;
+    align-items: center;
+    background-color: var(--primary-color);
+
+}
+
+header img {
+    width: 200px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 1em;
+}
+
+/* ===== Layout ===== */
 header,
 main,
 footer {
@@ -29,41 +52,7 @@ footer {
     margin: 0 auto;
 }
 
-/* ===== Header ===== */
-header {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    align-items: center;
-    background-color: var(--primary-color);
-    padding: 0 1rem;
-}
-
-header img {
-    width: 100%;
-    height: auto;
-}
-
-nav {
-    display: flex;
-    justify-content: flex-end;
-    gap: 1.5rem;
-    padding: 1rem 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-}
-
-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* ===== Typography ===== */
+/* ===== Typography / Headings ===== */
 h1,
 h2 {
     font-family: var(--heading-font);
@@ -71,19 +60,44 @@ h2 {
     margin: 16px 0;
 }
 
-/* Section Headings with Background */
-section h2 {
+.adventure {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 16px;
+    margin-top: 1rem;
+}
+
+.history h2,
+.adventure h2 {
     background-color: var(--primary-color);
     color: white;
     padding: 10px;
     text-align: center;
     margin: 0 0 10px 0;
+    width: 100%;
 }
 
-/* ===== Sections ===== */
-section {
-    margin: 16px;
-    padding: 8px;
+.adventure figure {
+    flex: 1;
+    text-align: center;
+    min-width: 140px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    background-color: #3f3f3f;
+    color: #f3f3f3;
+}
+
+.socialmedia img {
+    width: 55px;
 }
 
 /* ===== Hero Section ===== */
@@ -128,62 +142,28 @@ section {
     border-radius: 6px;
 }
 
-.adventure {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* or space-around */
-    gap: 16px;
-    margin-top: 1rem;
+/* ===== Sections ===== */
+section {
+    margin: 16px;
+    padding: 8px;
 }
 
-.adventure figure {
-    flex: 1 1 1 calc(20% - 16px);
-    /* 5 equal columns with gap */
+section h2 {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
     text-align: center;
-    min-width: 140px;
-    /* prevents shrinking too much on small screens */
-}
-
-.adventure img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    object-fit: cover;
-}
-
-.adventure figcaption {
-    margin-top: 0.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
+    margin: 0 0 10px 0;
 }
 
 /* ===== Footer ===== */
 footer {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    background-color: #3f3f3f;
-    color: #f3f3f3;
     margin-top: 40px;
-    padding: 1.5rem 2rem;
+    padding-top: 20px;
     border-top: 2px solid var(--primary-color);
+    text-align: center;
 }
 
 footer p {
-    margin: 0;
-}
-
-.socialmedia {
-    display: flex;
-    gap: 12px;
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
-.socialmedia img {
-    width: 32px;
-    height: auto;
+    margin: 0 0 10px 0;
 }
