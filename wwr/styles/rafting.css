@@ -18,18 +18,32 @@ body {
     font-family: var(--body-font);
     color: var(--primary-color);
     background-color: #f9f9f9;
+    line-height: 1.5;
 }
 
+/* ===== Layout Containers ===== */
+header,
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
+    padding: 0 16px;
+    /* Prevent edge clipping */
+}
+
+/* ===== Header ===== */
 header {
     display: grid;
     grid-template-columns: 200px auto;
     align-items: center;
     background-color: var(--primary-color);
-
+    padding: 12px 0;
 }
 
 header img {
-    width: 200px;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 nav {
@@ -42,79 +56,32 @@ nav a {
     color: #ffffff;
     font-weight: bold;
     padding: 1em;
+    transition: background-color 0.3s;
 }
 
-/* ===== Layout ===== */
-header,
-main,
-footer {
-    width: 840px;
-    margin: 0 auto;
-}
-
-/* ===== Typography / Headings ===== */
-h1,
-h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-    margin: 16px 0;
-}
-
-.adventure {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 16px;
-    margin-top: 1rem;
-}
-
-.history h2,
-.adventure h2 {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px;
-    text-align: center;
-    margin: 0 0 10px 0;
-    width: 100%;
-}
-
-.adventure figure {
-    flex: 1;
-    text-align: center;
-    min-width: 140px;
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
-footer {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    align-items: center;
-    background-color: #3f3f3f;
-    color: #f3f3f3;
-}
-
-.socialmedia img {
-    width: 55px;
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
 }
 
 /* ===== Hero Section ===== */
 .hero {
     position: relative;
     margin-bottom: 32px;
+    width: 100%;
 }
 
 .hero img {
     display: block;
     width: 100%;
     height: auto;
+    border-radius: 4px;
 }
 
 .hero h1 {
     position: absolute;
     top: 20px;
+    left: 0;
     width: 100%;
     text-align: center;
     background-color: var(--accent1-color);
@@ -122,6 +89,8 @@ footer {
     padding: 16px;
     font-size: 2.2rem;
     margin: 0;
+    font-weight: bold;
+    letter-spacing: -0.5px;
 }
 
 .hero article {
@@ -133,6 +102,7 @@ footer {
     border-radius: 8px;
     max-width: 60%;
     color: var(--primary-color);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .hero article img {
@@ -140,30 +110,109 @@ footer {
     width: 125px;
     margin-left: 12px;
     border-radius: 6px;
+    display: block;
 }
 
-/* ===== Sections ===== */
-section {
-    margin: 16px;
-    padding: 8px;
-}
-
-section h2 {
+/* ===== Section Headings (Shared) ===== */
+.history h2,
+.adventure h2 {
+    grid-column: 1 / -1;
+    /* Critical: spans all columns */
     background-color: var(--primary-color);
     color: white;
     padding: 10px;
     text-align: center;
-    margin: 0 0 10px 0;
+    margin: 0 0 16px 0;
+    font-size: 1.5rem;
+    border-radius: 4px;
+}
+
+/* ===== History Section (Grid Layout) ===== */
+.history {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 1.25em;
+    margin: 24px 0;
+    align-items: start;
+}
+
+.history img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.history p {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+/* ===== Adventure Section (Grid Layout) ===== */
+.adventure {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.adventure figure {
+    text-align: center;
+    margin: 0;
+}
+
+.adventure img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    transition: transform 0.3s;
+}
+
+.adventure img:hover {
+    transform: scale(1.03);
+}
+
+.adventure figcaption {
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
 }
 
 /* ===== Footer ===== */
 footer {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    background-color: #3f3f3f;
+    color: #f3f3f3;
     margin-top: 40px;
-    padding-top: 20px;
-    border-top: 2px solid var(--primary-color);
-    text-align: center;
+    padding: 24px 0;
+    border-top: 3px solid var(--primary-color);
 }
 
 footer p {
-    margin: 0 0 10px 0;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.socialmedia {
+    text-align: right;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    margin-left: 12px;
+    display: inline-block;
+    transition: opacity 0.3s;
+}
+
+.socialmedia a:hover {
+    opacity: 0.7;
+}
+
+.socialmedia img {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid var(--accent1-color);
 }
