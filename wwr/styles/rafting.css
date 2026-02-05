@@ -18,7 +18,7 @@ body {
     font-family: var(--body-font);
     color: var(--primary-color);
     background-color: #f9f9f9;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 /* ===== Layout Containers ===== */
@@ -28,7 +28,6 @@ footer {
     width: 840px;
     margin: 0 auto;
     padding: 0 16px;
-    /* Prevent edge clipping */
 }
 
 /* ===== Header ===== */
@@ -89,8 +88,9 @@ nav a:hover {
     padding: 16px;
     font-size: 2.2rem;
     margin: 0;
+    font-family: var(--heading-font);
+    /* Use heading font */
     font-weight: bold;
-    letter-spacing: -0.5px;
 }
 
 .hero article {
@@ -113,17 +113,34 @@ nav a:hover {
     display: block;
 }
 
+/* ===== Typography / Headings ===== */
+h1,
+h2 {
+    font-family: var(--heading-font);
+    /* Use the variable! */
+    color: var(--primary-color);
+    margin: 16px 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
 /* ===== Section Headings (Shared) ===== */
 .history h2,
 .adventure h2 {
     grid-column: 1 / -1;
-    /* Critical: spans all columns */
+    /* Spans all columns */
     background-color: var(--primary-color);
+    /* Dark blue for contrast */
     color: white;
-    padding: 10px;
+    padding: 12px;
     text-align: center;
     margin: 0 0 16px 0;
-    font-size: 1.5rem;
     border-radius: 4px;
 }
 
@@ -176,6 +193,7 @@ nav a:hover {
     margin-top: 8px;
     font-weight: bold;
     font-size: 0.9rem;
+    color: var(--primary-color);
 }
 
 /* ===== Footer ===== */
@@ -193,6 +211,7 @@ footer {
 footer p {
     margin: 0;
     line-height: 1.5;
+    font-size: 0.95rem;
 }
 
 .socialmedia {
