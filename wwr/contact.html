@@ -1,129 +1,113 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-      content="Contact Rapids! Rafting for reservations, questions, or suggestions. Find our location, team information, and send us a message.">
-    <meta name="author" content="Aniwen Blessing">
-    <title>Contact Us | Rapids!</title>
-    <link rel="stylesheet" href="styles/rafting.css">
+    <title>Rapids! Rafting - Contact Us</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <img src="images/logo.png" alt="Rapids! Rafting Logo" width="150">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="rivers.html">Rivers</a>
-            <a href="about.html">About Us</a>
-            <a href="trips.html">Trips</a>
-            <a href="contact.html" class="active">Contact Us</a>
-        </nav>
+        <div class="header-content">
+            <img src="images/logo.png" alt="Rapids! Rafting Logo">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="trips.html">Trips</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="contact-info">
-            <h2>Contact Information</h2>
-            <div class="contact-details">
-                <div class="info-item">
-                    <h3>Address</h3>
-                    <address>123 River Run, Salmon, ID 83467</address>
-                </div>
-                <div class="info-item">
-                    <h3>Phone</h3>
-                    <p><a href="tel:+12085551234">(208) 555-1234</a></p>
-                    <p><a href="tel:+12085555678">(208) 555-5678</a> (Reservations)</p>
-                </div>
-                <div class="info-item">
-                    <h3>Email</h3>
-                    <p><a href="mailto:info@rapidsrafting.com">info@rapidsrafting.com</a></p>
-                    <p><a
-                          href="mailto:reservations@rapidsrafting.com">reservations@rapidsrafting.com</a>
-                    </p>
-                </div>
-            </div>
+    <main class="contact-page">
+        <div class="container">
+            <section class="contact-info">
+                <h1>White Water Rafting</h1>
+                <address>
+                    Rapids! Rafting Basecamp<br>
+                    123 River Trail<br>
+                    Boulder, CO 80302
+                    <a href="tel:+19999999999">+1 999 999 9999</a><br>
+                    <a href="mailto:info@whitewater.com">info@whitewater.com</a>
+                </address>
+            </section>
 
-            <div class="map-container">
-                <h3>Our Location</h3>
+            <div class="contact-layout">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10613.55151241287!2d-113.8917408!3d45.1574849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x532c7f8a8a8a8a8b%3A0x1a1a1a1a1a1a1a1a!2sSalmon%2C%20ID%2083467!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
-                  allowfullscreen loading="lazy">
-                </iframe>
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2611.6298531453567!2d-113.15626142507142!3d37.42263243236839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ca91afad231a8f%3A0xec6734a36c88eb1f!2sKolob%20Canyons!5e1!3m2!1sen!2sng!4v1771074388086!5m2!1sen!2sng"
+                  width="600" height="450" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade" class="gmap"></iframe>
+
+                <form action="#" class="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Your full name">
+
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" required
+                      placeholder="Your email address">
+
+                    <div class="purpose">
+                        <p>Message Purpose:</p>
+                        <fieldset>
+                            <input id="inquiry" type="radio" name="purpose" value="inquiry"
+                              required>
+                            <label for="inquiry">General Inquiry</label>
+                            <input id="reservation" type="radio" name="purpose" value="reservation">
+                            <label for="reservation">Reservation Question</label>
+                            <input id="feedback" type="radio" name="purpose" value="feedback">
+                            <label for="feedback">Website Suggestions</label>
+                        </fieldset>
+                    </div>
+                    <div class="full-w">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required
+                          placeholder="Your message"></textarea>
+                    </div>
+                    <div class="subscribe">
+                        <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+                        <label for="subscribe">Please Subscribe me to the monthly newsletter</label>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Get in Touch!</button>
+                </form>
             </div>
-        </section>
 
-        <section class="team-section">
-            <h2>Meet Our Expert Team</h2>
-            <div class="team-grid">
-                <figure>
-                    <img src="images/guide1.jpg" alt="Sarah Johnson, Head Guide">
-                    <figcaption>Sarah Johnson - Head Guide</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/guide2.jpg" alt="Mike Reynolds, Safety Coordinator">
-                    <figcaption>Mike Reynolds - Safety Coordinator</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/guide3.jpg" alt="Elena Rodriguez, Trip Planner">
-                    <figcaption>Elena Rodriguez - Trip Planner</figcaption>
-                </figure>
-            </div>
-        </section>
-
-        <section class="contact-form-section">
-            <h2>Send Us a Message</h2>
-            <form action="#" method="post">
-                <div class="form-group">
-                    <label for="name">Full Name:</label>
-                    <input type="text" id="name" name="name" required>
+            <section class="employees">
+                <h2>We Are Here to Serve You</h2>
+                <div class="employees-grid">
+                    <figure class="employee">
+                        <img src="images/guide1.jpg" alt="John Mckenzie">
+                        <figcaption>John Mckenzie</figcaption>
+                    </figure>
+                    <figure class="employee">
+                        <img src="images/guide2.jpg" alt="Sarah Johnson">
+                        <figcaption>Sarah Johnson</figcaption>
+                    </figure>
+                    <figure class="employee">
+                        <img src="images/guide3.jpg" alt="Michael Chen">
+                        <figcaption>Michael Chen</figcaption>
+                    </figure>
                 </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <p>Purpose of your message:</p>
-                    <div class="radio-group">
-                        <input type="radio" id="general" name="purpose" value="general" required>
-                        <label for="general">General Inquiry</label>
-                    </div>
-                    <div class="radio-group">
-                        <input type="radio" id="reservation" name="purpose" value="reservation">
-                        <label for="reservation">Reservation Question</label>
-                    </div>
-                    <div class="radio-group">
-                        <input type="radio" id="suggestion" name="purpose" value="suggestion">
-                        <label for="suggestion">Website Suggestion</label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-
-                <div class="form-group checkbox-group">
-                    <input type="checkbox" id="newsletter" name="newsletter">
-                    <label for="newsletter">Please subscribe me to the monthly newsletter</label>
-                </div>
-
-                <button type="submit" class="submit-btn">Send Message to Our Team</button>
-            </form>
-        </section>
+            </section>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 | Rapids! | Aniwen Blessing</p>
-        <nav class="socialmedia">
-            <a href="https://facebook.com"><img src="images/facebook-icon.png" alt="Facebook"></a>
-            <a href="https://twitter.com"><img src="images/twitter-icon.png" alt="X (Twitter)"></a>
-            <a href="https://instagram.com"><img src="images/instagram-icon.png"
-                  alt="Instagram"></a>
-        </nav>
+        <div class="container">
+            <p>&copy; 2026 | Rapids! Rafting | Aniwen Blessing</p>
+            <nav class="socialmedia">
+                <a href="https://facebook.com" target="_blank" rel="noopener">
+                    <img src="images/facebook-icon.png" alt="Follow us on Facebook">
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener">
+                    <img src="images/twitter-icon.png" alt="Follow us on X (Twitter)">
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener">
+                    <img src="images/instagram-icon.png" alt="Follow us on Instagram">
+                </a>
+            </nav>
+        </div>
     </footer>
 </body>
 
