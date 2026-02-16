@@ -1,51 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rapids! Rafting - Contact Us</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+      content="Contact Rapids! Rafting for inquiries, reservations, and more. Get in touch with our expert team today!">
+    <meta name="author" content="Aniwen Blessing">
+    <title>Contact Us | Rapids! Rafting</title>
+    <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
     <header>
-        <div class="header-content">
-            <img src="images/logo.png" alt="Rapids! Rafting Logo">
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="trips.html">Trips</a>
-                <a href="contact.html">Contact Us</a>
-            </nav>
-        </div>
+        <img src="images/logo.png" alt="Rapids! Rafting Logo" width="150">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html" class="active">Contact Us</a>
+        </nav>
     </header>
 
     <main class="contact-page">
         <div class="container">
+            <!-- Contact Information Section -->
             <section class="contact-info">
-                <h1>White Water Rafting</h1>
+                <h1>Rapids! Rafting Contact</h1>
                 <address>
                     Rapids! Rafting Basecamp<br>
                     123 River Trail<br>
-                    Boulder, CO 80302
+                    Boulder, CO 80302<br>
                     <a href="tel:+19999999999">+1 999 999 9999</a><br>
                     <a href="mailto:info@whitewater.com">info@whitewater.com</a>
                 </address>
             </section>
 
+            <!-- Map and Form Layout -->
             <div class="contact-layout">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2611.6298531453567!2d-113.15626142507142!3d37.42263243236839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ca91afad231a8f%3A0xec6734a36c88eb1f!2sKolob%20Canyons!5e1!3m2!1sen!2sng!4v1771074388086!5m2!1sen!2sng"
-                  width="600" height="450" allowfullscreen="" loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade" class="gmap"></iframe>
+                <!-- Google Map -->
+                <div class="map-section">
+                    <h2>Find Us</h2>
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2611.6298531453567!2d-113.15626142507142!3d37.42263243236839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ca91afad231a8f%3A0xec6734a36c88eb1f!2sKolob%20Canyons!5e1!3m2!1sen!2sng!4v1771074388086!5m2!1sen!2sng"
+                      width="600" height="450" allowfullscreen loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade" class="gmap"></iframe>
+                </div>
 
+                <!-- Contact Form -->
                 <form action="#" class="contact-form">
+                    <h2>Send Us a Message</h2>
+
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required placeholder="Your full name">
 
                     <label for="email">Email:</label>
-                    <input type="text" id="email" name="email" required
+                    <input type="email" id="email" name="email" required
                       placeholder="Your email address">
 
                     <div class="purpose">
@@ -54,39 +64,45 @@
                             <input id="inquiry" type="radio" name="purpose" value="inquiry"
                               required>
                             <label for="inquiry">General Inquiry</label>
+
                             <input id="reservation" type="radio" name="purpose" value="reservation">
                             <label for="reservation">Reservation Question</label>
+
                             <input id="feedback" type="radio" name="purpose" value="feedback">
-                            <label for="feedback">Website Suggestions</label>
+                            <label for="feedback">Website Suggestion</label>
                         </fieldset>
                     </div>
+
                     <div class="full-w">
                         <label for="message">Message:</label>
                         <textarea id="message" name="message" rows="4" required
                           placeholder="Your message"></textarea>
                     </div>
+
                     <div class="subscribe">
                         <input type="checkbox" id="subscribe" name="subscribe" value="yes">
-                        <label for="subscribe">Please Subscribe me to the monthly newsletter</label>
+                        <label for="subscribe">Please subscribe me to the monthly newsletter</label>
                     </div>
-                    <button type="submit" class="btn btn-submit">Get in Touch!</button>
+
+                    <button type="submit" class="btn-submit">Get in Touch!</button>
                 </form>
             </div>
 
+            <!-- Employee Section -->
             <section class="employees">
-                <h2>We Are Here to Serve You</h2>
+                <h2>Meet Our Team</h2>
                 <div class="employees-grid">
                     <figure class="employee">
-                        <img src="images/guide1.jpg" alt="John Mckenzie">
-                        <figcaption>John Mckenzie</figcaption>
+                        <img src="images/guide1.jpg" alt="John McKenzie - Head Guide">
+                        <figcaption>John McKenzie<br><small>Head Guide</small></figcaption>
                     </figure>
                     <figure class="employee">
-                        <img src="images/guide2.jpg" alt="Sarah Johnson">
-                        <figcaption>Sarah Johnson</figcaption>
+                        <img src="images/guide2.jpg" alt="Sarah Johnson - Safety Coordinator">
+                        <figcaption>Sarah Johnson<br><small>Safety Coordinator</small></figcaption>
                     </figure>
                     <figure class="employee">
-                        <img src="images/guide3.jpg" alt="Michael Chen">
-                        <figcaption>Michael Chen</figcaption>
+                        <img src="images/guide3.jpg" alt="Michael Chen - Trip Coordinator">
+                        <figcaption>Michael Chen<br><small>Trip Coordinator</small></figcaption>
                     </figure>
                 </div>
             </section>
@@ -94,20 +110,18 @@
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 | Rapids! Rafting | Aniwen Blessing</p>
-            <nav class="socialmedia">
-                <a href="https://facebook.com" target="_blank" rel="noopener">
-                    <img src="images/facebook-icon.png" alt="Follow us on Facebook">
-                </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener">
-                    <img src="images/twitter-icon.png" alt="Follow us on X (Twitter)">
-                </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener">
-                    <img src="images/instagram-icon.png" alt="Follow us on Instagram">
-                </a>
-            </nav>
-        </div>
+        <p>&copy; 2026 | Rapids! Rafting | Aniwen Blessing</p>
+        <nav class="socialmedia">
+            <a href="https://facebook.com" target="_blank" rel="noopener">
+                <img src="images/facebook-icon.png" alt="Follow us on Facebook">
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener">
+                <img src="images/twitter-icon.png" alt="Follow us on X (Twitter)">
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener">
+                <img src="images/instagram-icon.png" alt="Follow us on Instagram">
+            </a>
+        </nav>
     </footer>
 </body>
 
